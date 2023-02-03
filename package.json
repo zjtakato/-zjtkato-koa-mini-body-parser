@@ -8,7 +8,9 @@
   },
   "keywords": [
     "迷你版的",
-    "koa-bodyparser"
+    "koa-mini-bodyparser",
+    "@zjtakato",
+    "mini-bodyparser"
   ],
   "author": "zjtakato <zjtakato@gmail.com>",
   "license": "ISC",
@@ -23,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zjtakato/-zjtkato-koa-mini-body-parser.git"
+    "url": "https://github.com/zjtakato/koa-mini-body-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/zjtakato/-zjtkato-koa-mini-body-parser/issues"
+    "url": "https://github.com/zjtakato/koa-mini-body-parser/issues"
   }
 }
