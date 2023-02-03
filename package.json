@@ -1,0 +1,31 @@
+{
+  "name": "@zjtakato/koa-mini-body-parser",
+  "version": "1.0.0",
+  "description": "迷你版的 koa-bodyparser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "迷你版的",
+    "koa-bodyparser"
+  ],
+  "author": "zjtakato <zjtakato@gmail.com>",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    }
+  },
+  "dependencies": {
+    "co-body": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zjtakato/-zjtkato-koa-mini-body-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zjtakato/-zjtkato-koa-mini-body-parser/issues"
+  }
+}
