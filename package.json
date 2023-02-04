@@ -1,6 +1,6 @@
 {
   "name": "@zjtakato/koa-mini-body-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "迷你版的 koa-bodyparser",
   "main": "index.js",
   "scripts": {
