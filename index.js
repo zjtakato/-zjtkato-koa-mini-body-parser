@@ -8,7 +8,7 @@ const parser = require('co-body');
 
 /**
  * koa的数据传输内容解析器, 支持json, form, xml 格式的内容传输
- * @param {MainOptionsDto} options - options对象
+ * @param {import('./types').MainOptionsDto} options - options对象
  * @returns {void}
  */
 module.exports = (options) => {
@@ -63,37 +63,14 @@ module.exports = (options) => {
 
 /**
  * 转换成co-body options参数支持的类型
- * @param {Object} options - 传入koa-mini-body-parser的参数
+ * @param {import('./types').MainOptionsDto} options - 传入koa-mini-body-parser的参数
  * @param {'json' | 'xml' | 'form'} type - 当前传输数据的类型
- * @returns {CoBodyOptionsDto}
+ * @returns {import('./types').CoBodyOptionsDto}
  */
 function coBodyOptionsFormat(options, type) {
-  /** @type {CoBodyOptionsDto} */
+  /** @type {import('./types').CoBodyOptionsDto} */
   const res = { ...options };
   res.limit = options[type + 'Limit'];
   res.returnRawBody = true;
   return res;
 }
-
-// -------------------------------------------------- types ------------------------------------------------------------
-/**
- * co-body options dto
- * @typedef {Object} CoBodyOptionsDto
- * @property {string} limit - 限制数据大小
- * @property {boolean} returnRawBody - 是否返回解析的数据
- */
-
-/**
- * @callback onErrorCallBackDto
- * @param {Error} error - 异常
- * @param {any} ctx - koa-ctx上下文
- */
-
-/**
- * @zjtakato/koa-mini-body-parser options dto
- * @typedef {Object} MainOptionsDto
- * @property {onErrorCallBackDto=} onError - 自定义错误处理回调函数
- * @property {string=} formLimit - 透传到co-body的urlencoded内容最大限制 默认为56kb
- * @property {string=} jsonLimit 透传到co-body的json内容大最限制 默认为1mb
- * @property {string=} xmlLimit 透传的到co-body的xml内容最大限制 默认为1mb
- */
